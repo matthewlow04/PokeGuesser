@@ -41,6 +41,3 @@ class ChosenPokemonApi {
     }
 }
 
-//var mockPokemon: ChosenPokemon{
-//    .init(weight: "1", abilities: PokemonAbilities.init(ability: PokemonAbilityName.init(name: ["Hi","Bye"])), height: "1")
-//}

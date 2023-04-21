@@ -15,6 +15,7 @@
 		34673ECE29EF0F90006EF7EC /* ChosenPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34673ECD29EF0F90006EF7EC /* ChosenPokemon.swift */; };
 		34D5A88629F1C9E700FFEF75 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88529F1C9E700FFEF75 /* PokemonCell.swift */; };
 		34D5A88829F1D36900FFEF75 /* PokemonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88729F1D36900FFEF75 /* PokemonImage.swift */; };
+		34D5A88A29F242F900FFEF75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88929F242F900FFEF75 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		34673ECD29EF0F90006EF7EC /* ChosenPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenPokemon.swift; sourceTree = "<group>"; };
 		34D5A88529F1C9E700FFEF75 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		34D5A88729F1D36900FFEF75 /* PokemonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImage.swift; sourceTree = "<group>"; };
+		34D5A88929F242F900FFEF75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,9 @@
 		34673EBB29EEFB3E006EF7EC /* PokeGuesser */ = {
 			isa = PBXGroup;
 			children = (
+				34673EBC29EEFB3E006EF7EC /* PokeGuesserApp.swift */,
 				34D5A88429F1C9C500FFEF75 /* View */,
 				34673ECA29EEFB6A006EF7EC /* Model */,
-				34673EBC29EEFB3E006EF7EC /* PokeGuesserApp.swift */,
 				34673EC029EEFB43006EF7EC /* Assets.xcassets */,
 				34673EC229EEFB43006EF7EC /* Preview Content */,
 			);
@@ -88,6 +90,7 @@
 		34D5A88429F1C9C500FFEF75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34D5A88929F242F900FFEF75 /* HomeView.swift */,
 				34673EBE29EEFB3E006EF7EC /* PokedexView.swift */,
 				34D5A88529F1C9E700FFEF75 /* PokemonCell.swift */,
 				34D5A88729F1D36900FFEF75 /* PokemonImage.swift */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D5A88629F1C9E700FFEF75 /* PokemonCell.swift in Sources */,
+				34D5A88A29F242F900FFEF75 /* HomeView.swift in Sources */,
 				34673EBF29EEFB3E006EF7EC /* PokedexView.swift in Sources */,
 				34673EBD29EEFB3E006EF7EC /* PokeGuesserApp.swift in Sources */,
 				34673ECC29EEFBC0006EF7EC /* Pokemon.swift in Sources */,
@@ -305,6 +309,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,6 +339,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
