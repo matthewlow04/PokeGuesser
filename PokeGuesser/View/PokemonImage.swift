@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PokemonImage: View {
     
-    var imageLink = ""
+    @Binding var imageLink: String
     @State private var pokemonSprite = ""
     var body: some View {
         AsyncImage(url: URL(string: pokemonSprite))
@@ -40,9 +40,9 @@ struct PokemonImage: View {
         }
     }
 }
-
-struct PokemonImage_Previews: PreviewProvider {
-    static var previews: some View {
-        PokemonImage()
-    }
-}
+//
+//struct PokemonImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PokemonImage()
+//    }
+//}

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokedexView: View {
-    @State var pokemon = [Pokemon]()
+    @Binding var pokemon: [Pokemon]
     @State var searchText = ""
     var body: some View {
         
@@ -19,21 +19,21 @@ struct PokedexView: View {
                 })) { entry in
                     PokemonCell(pokemon: entry)
                 }
+
             }
-            .onAppear{
-                PokeApi().getData() { pokemon in
-                    self.pokemon = pokemon
-                }
-            }
-            .searchable(text: $searchText)
-            .navigationTitle("Pokedex")
+           
         }
+        .searchable(text: $searchText)
+        .navigationTitle("Pokedex")
+        
+       
     
     }
 }
-
+/*
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         PokedexView()
     }
 }
+ */

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct PokemonCell: View {
     
-    var pokemon: Pokemon
+    @State var pokemon: Pokemon
     
     var body: some View {
         HStack{
-            PokemonImage(imageLink: "\(pokemon.url)")
+            PokemonImage(imageLink: $pokemon.url)
                 .padding(.trailing, 20)
-            NavigationLink("\(pokemon.name)".capitalized , destination: Text("Detail view for \(pokemon.name)"))
+            NavigationLink("\(pokemon.name)".capitalized , destination: DetailView(pokemon: pokemon))
+               
         }
     }
 }
