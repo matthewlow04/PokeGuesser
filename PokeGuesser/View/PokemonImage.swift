@@ -8,35 +8,38 @@
 import SwiftUI
 
 struct PokemonImage: View {
-    
     @Binding var imageLink: String
     @State private var pokemonSprite = ""
+    var listView: Bool
+
     var body: some View {
         AsyncImage(url: URL(string: pokemonSprite))
-            .frame(width: 75, height: 75)
-            .onAppear{
+            .frame(width: listView ? 75 : 200, height:listView ? 75 : 200)
+            .scaleEffect(listView ? 1.0 : 2.0)
+            .onChange(of: imageLink) { newImageLink in
+                getSprite(url: newImageLink)
+            }
+            .onAppear {
                 let loadedData = UserDefaults.standard.string(forKey: imageLink)
                 
-                if loadedData == nil{
+                if loadedData == nil {
                     getSprite(url: imageLink)
                     UserDefaults.standard.set(imageLink, forKey: imageLink)
-                    print("New url!!! Caching...")
-                }else{
+//                    print("New url!!! Caching...")
+                } else {
                     getSprite(url: loadedData!)
-                    print("using cached url")
+//                    print("Using cached url")
                 }
             }
-            .clipShape(Circle())
-            .foregroundColor(Color.gray.opacity(0.6))
+            .foregroundColor(Color.gray.opacity(listView ? 0.6 : 0.9))
+            .clipShape(RoundedRectangle(cornerRadius: listView ? 10000 : 0))
+        
+
     }
-        
-    func getSprite(url:String){
-        var tempSprite = ""
-        
-        ChosenPokemonApi().getData(url: url){ sprite in
-            tempSprite = sprite.front_default
-            self.pokemonSprite = tempSprite
-            
+    
+    func getSprite(url: String) {
+        ChosenPokemonApi().getData(url: url) { sprite in
+            self.pokemonSprite = sprite.front_default
         }
     }
 }

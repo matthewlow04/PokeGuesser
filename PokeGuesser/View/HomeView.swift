@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var pokemon = [Pokemon]()
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ZStack{
                 VStack{
                     Rectangle()

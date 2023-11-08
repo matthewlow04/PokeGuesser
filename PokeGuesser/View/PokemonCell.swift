@@ -13,9 +13,9 @@ struct PokemonCell: View {
     
     var body: some View {
         HStack{
-            PokemonImage(imageLink: $pokemon.url)
+            PokemonImage(imageLink: $pokemon.url, listView: true)
                 .padding(.trailing, 20)
-            NavigationLink("\(pokemon.name)".capitalized , destination: DetailView(pokemon: pokemon))
+            NavigationLink("\(pokemon.name.capitalized)" , destination: DetailView(pokemon: pokemon, imageLink: pokemon.url))
                
         }
     }

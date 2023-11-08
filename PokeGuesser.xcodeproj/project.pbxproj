@@ -18,6 +18,7 @@
 		34D5A88829F1D36900FFEF75 /* PokemonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88729F1D36900FFEF75 /* PokemonImage.swift */; };
 		34D5A88A29F242F900FFEF75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88929F242F900FFEF75 /* HomeView.swift */; };
 		34E7084F29F30F0500CC24DB /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7084E29F30F0500CC24DB /* GameView.swift */; };
+		A07AB4AA2AFB0EF900810F22 /* ConvertToMetres.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07AB4A92AFB0EF900810F22 /* ConvertToMetres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		34D5A88729F1D36900FFEF75 /* PokemonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImage.swift; sourceTree = "<group>"; };
 		34D5A88929F242F900FFEF75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34E7084E29F30F0500CC24DB /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A07AB4A92AFB0EF900810F22 /* ConvertToMetres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToMetres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				34673EBC29EEFB3E006EF7EC /* PokeGuesserApp.swift */,
 				34D5A88429F1C9C500FFEF75 /* View */,
 				34673ECA29EEFB6A006EF7EC /* Model */,
+				A07AB4A92AFB0EF900810F22 /* ConvertToMetres.swift */,
 				34673EC029EEFB43006EF7EC /* Assets.xcassets */,
 				34673EC229EEFB43006EF7EC /* Preview Content */,
 			);
@@ -180,6 +183,7 @@
 				34B1E61E2A2061B600B804F3 /* DetailView.swift in Sources */,
 				34673EBD29EEFB3E006EF7EC /* PokeGuesserApp.swift in Sources */,
 				34673ECC29EEFBC0006EF7EC /* Pokemon.swift in Sources */,
+				A07AB4AA2AFB0EF900810F22 /* ConvertToMetres.swift in Sources */,
 				34673ECE29EF0F90006EF7EC /* ChosenPokemon.swift in Sources */,
 				34E7084F29F30F0500CC24DB /* GameView.swift in Sources */,
 				34D5A88829F1D36900FFEF75 /* PokemonImage.swift in Sources */,
@@ -320,6 +324,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,6 +355,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

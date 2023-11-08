@@ -13,6 +13,8 @@ struct GameView: View {
     @State var currentPokemon = Pokemon(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/")
     @State var guess = ""
     @State var score = 0
+    @State var highestStreak = 0
+    @State var currentStreak = 0
     @State var imageLink = ""
     var body: some View {
         ZStack{
@@ -28,7 +30,7 @@ struct GameView: View {
                     .foregroundColor(.white)
                     .font(.headline)
                 Spacer()
-                PokemonImage(imageLink: $imageLink)
+                PokemonImage(imageLink: $imageLink, listView: false)
                 Spacer()
                 HStack{
                     Text("Guess: ")
@@ -57,6 +59,11 @@ struct GameView: View {
             print(currentPokemon.name)
             if guess.lowercased() == currentPokemon.name{
                 score += 1
+                currentStreak += 1
+            } else{
+                highestStreak = max(currentStreak, highestStreak)
+                currentStreak = 0
+        
             }
             newGame()
             

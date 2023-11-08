@@ -12,28 +12,22 @@ struct PokedexView: View {
     @State var searchText = ""
     var body: some View {
         
-        NavigationView{
+        NavigationStack{
             List{
-                ForEach(searchText == "" ? pokemon : pokemon.filter({ //if search text empty return entire pokemon array
-                    $0.name.contains(searchText.lowercased())
-                })) { entry in
+                ForEach(searchText == "" ? pokemon : pokemon.filter({$0.name.contains(searchText.lowercased())})) { entry in
                     PokemonCell(pokemon: entry)
                 }
 
             }
+            .searchable(text: $searchText)
+            .navigationTitle("Pokedex")
            
         }
-        .searchable(text: $searchText)
-        .navigationTitle("Pokedex")
+       
+
         
        
     
     }
 }
-/*
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        PokedexView()
-    }
-}
- */
+
