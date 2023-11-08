@@ -26,9 +26,20 @@ struct GameView: View {
                     .foregroundColor(.white)
             }
             VStack{
-                Text("Score: \(score)")
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Total Score: \(score)")
+                        Text("Current Streak: \(currentStreak)")
+                        Text("Highest Streak: \(highestStreak)")
+                    }
                     .foregroundColor(.white)
                     .font(.headline)
+
+                    Spacer()
+                }
+                
+                
+               
                 Spacer()
                 PokemonImage(imageLink: $imageLink, listView: false)
                 Spacer()
@@ -44,6 +55,7 @@ struct GameView: View {
                 newGameButton
                 
         }
+            .padding(.horizontal, 10)
        
       
         }.onAppear{
@@ -60,8 +72,9 @@ struct GameView: View {
             if guess.lowercased() == currentPokemon.name{
                 score += 1
                 currentStreak += 1
-            } else{
                 highestStreak = max(currentStreak, highestStreak)
+
+            } else{
                 currentStreak = 0
         
             }
